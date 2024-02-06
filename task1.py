@@ -16,10 +16,18 @@ import matplotlib.pyplot as plt
 
 # aaa=a*aa
 # print(aaa)
-# img = cv.imread("D:/self/OCV/Open-CV/Part 1/part1Materials/messi.jpg",1)
+img = cv.imread("D:/self/OCV/Open-CV/Part 1/part1Materials/messi.jpg",1)
 # img= cv.pyrDown(img)
 
-# b,g,r=cv.split(img)
+b,g,r=cv.split(img)
+
+
+img2=cv.merge([r,g,b])
+cv.namedWindow("rgb img",cv.WINDOW_NORMAL)
+cv.imshow("rgb img",img2)
+
+cv.namedWindow("bgr img",cv.WINDOW_NORMAL)
+cv.imshow("bgr img",img)
 
 
 
@@ -40,7 +48,9 @@ import matplotlib.pyplot as plt
 # plt.show()
 
 
-# cv.waitKey(0)
-# cv.destroyAllWindows()
+cv.waitKey(0)
+cv.destroyAllWindows()
+
+
 
 
